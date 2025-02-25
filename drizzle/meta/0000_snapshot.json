@@ -1,0 +1,351 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "fcc0b845-4c20-4815-b395-b18d74f92263",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "MONBUIS": {
+      "name": "MONBUIS",
+      "columns": {
+        "ID": {
+          "name": "ID",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "MON_ID": {
+          "name": "MON_ID",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "BUI_NAME": {
+          "name": "BUI_NAME",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "NIKU_ZAN": {
+          "name": "NIKU_ZAN",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_DA": {
+          "name": "NIKU_DA",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_DAN": {
+          "name": "NIKU_DAN",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_HI": {
+          "name": "NIKU_HI",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_MIZU": {
+          "name": "NIKU_MIZU",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_RAI": {
+          "name": "NIKU_RAI",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_KORI": {
+          "name": "NIKU_KORI",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "NIKU_RYU": {
+          "name": "NIKU_RYU",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "CREATED_AT": {
+          "name": "CREATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        },
+        "UPDATED_AT": {
+          "name": "UPDATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "MONSTERS": {
+      "name": "MONSTERS",
+      "columns": {
+        "ID": {
+          "name": "ID",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "MON_TYPE": {
+          "name": "MON_TYPE",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "MON_NAME": {
+          "name": "MON_NAME",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "CREATED_AT": {
+          "name": "CREATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        },
+        "UPDATED_AT": {
+          "name": "UPDATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "MOTIONS": {
+      "name": "MOTIONS",
+      "columns": {
+        "ID": {
+          "name": "ID",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "WEAPON_TYPE": {
+          "name": "WEAPON_TYPE",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "'片手剣'"
+        },
+        "MOTION_NAME": {
+          "name": "MOTION_NAME",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "MOTION_VALUE": {
+          "name": "MOTION_VALUE",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "ZOKUSEI_RITSU": {
+          "name": "ZOKUSEI_RITSU",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "ZAN_DA_DAN": {
+          "name": "ZAN_DA_DAN",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "CREATED_AT": {
+          "name": "CREATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        },
+        "UPDATED_AT": {
+          "name": "UPDATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "WEAPONS": {
+      "name": "WEAPONS",
+      "columns": {
+        "ID": {
+          "name": "ID",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "WEAPON_TYPE": {
+          "name": "WEAPON_TYPE",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "'片手剣'"
+        },
+        "WEAPON_NAME": {
+          "name": "WEAPON_NAME",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ZOKUSEI_TYPE": {
+          "name": "ZOKUSEI_TYPE",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "'無'"
+        },
+        "KOUGEKI_RYOKU": {
+          "name": "KOUGEKI_RYOKU",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "ZOKUSEI_RYOKU": {
+          "name": "ZOKUSEI_RYOKU",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "KAIHO_FLG": {
+          "name": "KAIHO_FLG",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "ZOKUSEI_KAIHO": {
+          "name": "ZOKUSEI_KAIHO",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "KIREAJI_HOSEI": {
+          "name": "KIREAJI_HOSEI",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "KAISHIN_RITSU": {
+          "name": "KAISHIN_RITSU",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
+        },
+        "CREATED_AT": {
+          "name": "CREATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        },
+        "UPDATED_AT": {
+          "name": "UPDATED_AT",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(strftime('%s', 'now'))"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
