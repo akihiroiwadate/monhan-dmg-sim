@@ -11,6 +11,7 @@ export const weaponsTable = sqliteTable("WEAPONS", {
   kaihoFlg: integer("KAIHO_FLG", { mode: "boolean" }).default(false),
   zokuseiKaiho: integer("ZOKUSEI_KAIHO", { mode: "number" }).default(0),
   kireajiHosei: real("KIREAJI_HOSEI").default(0.0),
+  kireajiHoseiZokusei: real("KIREAJI_HOSEI_ZOKUSEI").default(0.0),
   kaishinRitsu: real("KAISHIN_RITSU").default(0.0),
   createdAt: integer("CREATED_AT", { mode: "timestamp" }).default(
     sql`(strftime('%s', 'now'))`

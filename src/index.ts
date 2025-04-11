@@ -1,5 +1,5 @@
 import { Hono } from 'hono'
-import mainPageRouter from './routes/mainPage'
+import mainPageRouter from './routes/frontend/mainPage'
 
 const app = new Hono()
 

@@ -1,6 +1,5 @@
 import { Hono } from 'hono'
 
-import { Chart } from 'chart.js'
 import { useEffect } from 'hono/jsx'
 import { render } from 'hono/jsx/dom'
 import { html } from 'hono/html'
